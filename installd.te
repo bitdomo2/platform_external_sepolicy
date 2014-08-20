@@ -31,3 +31,7 @@ allow installd bluetooth_data_file:lnk_file { create setattr };
 allow installd nfc_data_file:lnk_file { create setattr };
 allow installd radio_data_file:lnk_file { create setattr };
 allow installd shell_data_file:lnk_file { create setattr };
+
+# Allow querying of asec size on SD card
+allow installd sdcard_external:dir { search };
+allow installd sdcard_external:file { getattr };
